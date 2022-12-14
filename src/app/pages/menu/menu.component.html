@@ -1,0 +1,15 @@
+<div class="container mt-5 mb-5">
+  <h1 class="text-center">Sabores</h1>
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let pz of pizzaData">
+      <div class="pizzabox" >
+        <img src="{{ pz.foodImg }}"/>
+        <h1>{{ pz.foodDetails }}</h1>
+        <p>{{ pz.foodPrice | currency: 'BRL'}}</p>
+        <a class="btn-pedido"><i class="bi bi-cart3"></i> Fazer Pedido</a>
+      </div>
+
+  </div>
+  </div>
+</div>
+
