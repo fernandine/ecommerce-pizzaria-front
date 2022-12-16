@@ -6,11 +6,12 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MenupageComponent } from './pages/menupage/menupage.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'menu', component: MenuComponent },
+  { path: 'pizzas', component: MenuComponent },
+  { path: 'pizzas/:id', component: MenupageComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'menu/:id', component: MenupageComponent },
   { path: 'contact', component: ContactComponent },
 ];
 

@@ -1,1 +1,24 @@
-<p>contact works!</p>
+<mat-card>
+  <mat-toolbar color="primary">Contato</mat-toolbar>
+
+  <mat-card-content>
+    <form class="min-width">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Nome" formControlName="name" #name /><br><br>
+        <input matInput placeholder="Telefone" formControlName="name" #name /><br><br>
+        <input matInput placeholder="Email" formControlName="name" #name />
+        
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions class="actions-center">
+    <button mat-raised-button color="primary">
+      Salvar
+    </button>
+    <button mat-raised-button  class="btn-space">
+      Cancelar
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -7,19 +7,29 @@
 
 .banner h1 {
   color: white;
-  font-size: 60px;
+  font-size: 90px;
   font-weight: bold;
-  top: 30%;
-  left: 36%;
+  top: 40%;
+  left: 30%;
   position: absolute;
 }
 .banner h3 {
   color: rgb(238, 235, 64);
-  font-size: 30px;
+  font-size: 37px;
   font-weight: bold;
-  top: 40%;
-  left: 36%;
+  top: 35%;
+  left: 32%;
   position: absolute;
+}
+
+.btn-pedido {
+  color:rgb(44, 44, 44);
+  background-color: rgb(231, 228, 32);
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .step {
@@ -28,8 +38,8 @@
 }
 
 .btn-primary {
-  top: 47%;
-  left: 36%;
+  top: 57%;
+  left: 45%;
   position: absolute;
   background-color: yellow;
   color: black;
@@ -70,11 +80,13 @@
   margin-top: 20px;
 }
 
-.maisOpçoes {
-  text-decoration: none;
-  background-color: rgb(201, 15, 15);
-  padding: 10px 10px;
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
+.space-btn {
+  display: flex;
+  margin-top: 40px;
+}
+
+mat-card {
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: center;
 }

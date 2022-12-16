@@ -1,19 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderDetailsService } from '../../services/order-details.service';
+import { Pizza } from 'src/app/models/pizza';
+import { PizzaService } from '../../services/pizza.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private service: OrderDetailsService) {}
-  pizzaData: any;
+  pizzas: Pizza[] = [];
 
-  ngOnInit(): void {
-    this.pizzaData = this.service.foodDetails;
+  constructor(private service: PizzaService) {}
+
+  ngOnInit() {
+    this.getPizza();
   }
 
+  getPizza(){
+    this.service.getPizza().subscribe(api =>{
+      this.pizzas =  api;
+    })
+  }
 
 }
+

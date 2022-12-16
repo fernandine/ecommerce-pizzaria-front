@@ -1,15 +1,23 @@
-<div class="container mt-5 mb-5">
-  <h1 class="text-center">Sabores</h1>
-  <div class="row">
-    <div class="col-lg-4" *ngFor="let pz of pizzaData">
-      <div class="pizzabox" >
-        <img src="{{ pz.foodImg }}"/>
-        <h1>{{ pz.foodDetails }}</h1>
-        <p>{{ pz.foodPrice | currency: 'BRL'}}</p>
-        <a class="btn-pedido"><i class="bi bi-cart3"></i> Fazer Pedido</a>
-      </div>
+<mat-card>
+  <mat-toolbar color="primary">Sabores</mat-toolbar>
 
-  </div>
-  </div>
-</div>
+    <section class="row">
+      <div class="col-lg-3" *ngFor="let pizza of pizzas">
+        <div class="pizzabox" >
+          <img mat-card-image src="{{ pizza.img }}">
+          <mat-card-content>
+          <h1>{{ pizza.name }}</h1>
+          <p class="description">{{ pizza.description }}</p>
+          <p>{{ pizza.price | currency: 'BRL'}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Fazer Pedido</button>
+        </mat-card-actions>
+        </div>
+    </div>
+    </section>
+  </mat-card>
+
+
+
 

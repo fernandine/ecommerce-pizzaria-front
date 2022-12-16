@@ -3,8 +3,8 @@
     <h1>Hora da pizza!</h1>
     <h3>Aquele Momento Inesquecível</h3>
   </div>
-  <button type="button" class="btn btn-primary" routerLink="menu">
-    Fazer pedido <i class="bi bi-arrow-right"></i>
+  <button type="button" class="btn btn-primary" routerLink="pizzas">
+   Faça seu pedido aqui! <i class="bi bi-arrow-right"></i>
   </button>
 </div>
 
@@ -35,18 +35,23 @@
 
     </div>
 
-    <div class="container mt-4 mb-4">
-      <h1 class="text-center">Sabores</h1>
-      <div class="row">
-        <div class="col-lg-3" *ngFor="let pz of pizzaData as i">
-          <div class="pizzabox" *ngIf="i <= 3" >
-            <img src="{{ pz.foodImg }}"/>
-            <h1>{{ pz.foodName }}</h1>
-            <p>{{ pz.foodPrice | currency: 'BRL'}}</p>
+    <mat-card>
+    <mat-toolbar color="primary">Contato</mat-toolbar>
+          <section class="row">
+            <div class="col-lg-3" *ngFor="let pizza of pizzas">
+              <div class="pizzabox" >
+                <img src="{{ pizza.img }}"/>
+                <h1>{{ pizza.name }}</h1>
+                <p>{{ pizza.price | currency: 'BRL'}}</p>
+                <div class="btn-pizzabox">
+                <a class="btn-pedido"><i class="bi bi-cart3"></i> Fazer Pedido</a>
+              </div>
+              </div>
           </div>
-
-      </div>
-      </div>
-      <a routerLink="menu" class="maisOpçoes">Mais Opções <i class="bi bi-arrow-right"></i></a>
+          </section>
+          <div class="space-btn">
+            <button mat-raised-button routerLink="pizzas" color="primary" >Veja Mais Opções</button>
+          </div>
+        </mat-card>
     </div>
 
